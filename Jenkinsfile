@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Clonar tu repositorio desde Git si es necesario
-                // sh 'git clone '
+                sh 'git clone https://github.com/Aggasth/python-app.git'
                 echo 'Clonado!'
             }
         }
