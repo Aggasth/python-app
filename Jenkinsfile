@@ -10,13 +10,6 @@ pipeline {
             }
         }
 
-        stage('Instalar Dependencias') {
-            steps {
-                // Instalar las dependencias de tu aplicación si las tienes
-                // sh 'pip install -r requirements.txt'
-            }
-        }
-
         stage('Ejecutar Aplicación') {
             steps {
                 // Ejecutar tu aplicación en Python
