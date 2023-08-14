@@ -4,18 +4,17 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Clonar tu repositorio desde Git si es necesario
+                // Clonar el repositorio desde Git
                 sh 'git init https://github.com/Aggasth/python-app.git'
-                echo 'Ya existe el repositorio clonado'
             }
         }
         stage('Install Dependencies') {
             steps {
-                sh 'pip install pymongo'
-                sh 'pip install names'
+                // Instalar dependencias
+                sh 'python3 -m pip install pymongo names'
             }
         }
-        stage('Ejecutar Aplicación') {
+        stage('Run Application') {
             steps {
                 sh 'python3 aplicacion.py'
             }
