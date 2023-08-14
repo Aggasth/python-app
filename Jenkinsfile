@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Ejecutar Aplicació') {
             steps {
-                sh 'python aplicacion.py'
+                sh 'python3 aplicacion.py'
             }
         }
     }
