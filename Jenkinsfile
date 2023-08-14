@@ -14,7 +14,7 @@ pipeline {
                 sh 'pip install pymongo'
             }
         }
-        stage('Ejecutar Aplicació') {
+        stage('Ejecutar Aplicación') {
             steps {
                 sh 'python3 aplicacion.py'
             }
