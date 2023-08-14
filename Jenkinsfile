@@ -2,21 +2,25 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Clonar Repositorio') {
             steps {
-                // Clonar el repositorio desde Git
-                sh 'git init https://github.com/Aggasth/python-app.git'
+                // Clonar el repositorio de tu aplicación desde tu sistema de control de versiones
+                git 'https://github.com/Aggasth/python-app.git'
+                // Cambiar 'URL_DEL_REPOSITORIO' por la URL real de tu repositorio
             }
         }
-        stage('Install Dependencies') {
+
+        stage('Instalar Dependencias') {
             steps {
-                // Instalar dependencias
-                sh 'python3 -m pip install pymongo names'
+                // Instalar las dependencias de tu aplicación si las tienes
+                // sh 'pip install -r requirements.txt'
             }
         }
-        stage('Run Application') {
+
+        stage('Ejecutar Aplicación') {
             steps {
-                sh 'python3 aplicacion.py'
+                // Ejecutar tu aplicación en Python
+                sh 'python app.py'
             }
         }
     }
