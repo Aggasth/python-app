@@ -12,6 +12,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh 'pip install pymongo'
+                sh 'pip install names'
             }
         }
         stage('Ejecutar Aplicación') {
